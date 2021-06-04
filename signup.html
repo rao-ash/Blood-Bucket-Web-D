@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>signup</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&display=swap" rel="stylesheet">
+   <style>
+      {margin:0px;
+	   padding:0px;
+       box-sizing:border-box;}
+       <input[type="text"] {
+                text-align: center;
+                   }
+				   body {
+  background-image: linear-gradient(to bottom right,#ffffff,#99ffff);
+}
+      .b{
+	    font-size:150%;
+        }
+		  .ash{width:100%;color:green}
+.ash:hover{
+                color:white;
+                background:green;
+				cursor:pointer;
+               }
+ul{list-style-type:disc;
+    margin:0;
+	padding:0;
+}
+.chk:hover{color:red;}
+#firsty{background-image: linear-gradient(to bottom right,#ffffe6,#ffff4d);}
+#firstu{background-image: linear-gradient(to bottom right,#fff0e6,#ff8533);}
+#firsti{background-image: linear-gradient(to bottom right,#e6f0ff,#3385ff);}
+#saacha{margin-top:60px;}
+#sacha{background-color: #f2f2f2;border-radius:30px;}
+
+   </style>
+   <script>
+       function validation(){
+       var name=document.getElementById("user").value;
+	   var mail =document.getElementById("mail").value;
+	   var pass=document.getElementById("pass").value;
+	   var cpass=document.getElementById("cpass").value;
+	   var age=document.getElementById("age").value;
+	   var bgroup=document.getElementById("bgroup").value;
+	   var mobn=document.getElementById("mobn").value;
+	   if(name=="")
+	     {document.getElementById("spau").innerHTML="**Please fill this field";
+		 return false;
+		 }
+	   if(name.length>15)
+	  {document.getElementById("spau").innerHTML="**Username should be max 15alphabets long";
+	  return false;
+	  }
+	  if(!isNaN(name))
+	  {document.getElementById("spau").innerHTML="**Only alphabets allowed";
+	  return false;
+	  }
+	   if(mail=="")
+	     {document.getElementById("spae").innerHTML="**Please fill this field";
+		 return false;
+		 }
+	   if(mail.indexOf('@')<=0)
+	     {document.getElementById("spae").innerHTML="**Invalid mail";
+		 return false;
+		 }
+	   if(pass=="")
+	     {document.getElementById("spap").innerHTML="**Please fill this field";
+		 return false;
+		 }
+	  if(pass.length<5||pass.length>15)
+	     {document.getElementById("spap").innerHTML="**Password length should be between 5 and 15";
+		 return false;
+		 }
+	   if(cpass=="")
+	     {document.getElementById("spac").innerHTML="**Please fill this field";
+		 return false;
+		 }
+	  if(cpass!=pass)
+	     {document.getElementById("spac").innerHTML="**Passwords don't match";
+		 return false;
+		 }
+	   if(age=="")
+	     {document.getElementById("spaa").innerHTML="**Please fill this field";
+		 return false;
+		 }
+	   if(isNaN(age))
+	     {document.getElementById("spaa").innerHTML="**Age must be integer";
+		 return false;
+		 }
+	   if(age<18)
+	     {document.getElementById("spaa").innerHTML="**Age must be above 18";
+		 return false;
+		 }
+	   if(bgroup=="")
+	     {document.getElementById("spab").innerHTML="**Please fill this field";
+		 return false;
+		 }
+	   if(mobn=="")
+	     {document.getElementById("spam").innerHTML="**Please fill this field";
+		 return false;
+		 }
+	   if(isNaN(mobn))
+	     {document.getElementById("spam").innerHTML="**Only integers allowed";
+		 return false;
+		 }
+	   if(mobn.length!=10)
+	     {document.getElementById("spam").innerHTML="**Invalid mobile no.";
+		 return false;
+		 }
+	   else{alert("Account created successsfully.")};
+    }
+   </script>
+</head>
+<body>
+<!--***************************************************nav*********************************************************-->
+ <nav class="navbar navbar-expand-lg bg-light navbar-light " >
+  <a class="navbar-brand " href="#">
+    <img src="https://serudsindia.org/wp-content/uploads/2018/06/World-Blood-Donor-Day.png" class="rounded-circle " alt="Logo" style="width:100px;" >
+  </a>
+  <span class="navbar-brand font-weight-bold font-italic" style="font-size:200%;font-family:'Anton', sans-serif;">BLOOD BUCKET</span>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item b ml-5 dropdown">
+        <a class="nav-link font-weight-bold dropdown-toggle" href="#" data-toggle="dropdown">Donate Blood</a>
+		<span class="caret"></span>
+		<div class="dropdown-menu p-4" id="firsty" style="width:350%">
+		<div class="row">
+		<div class="col-md-4">
+		    <p style="color:green;"><b>Manage My Donations</b></p>
+			<ul class="chk">
+			    <li ><a href="#">Schedule an appointment</a></li>
+				<li><a href="#">Manage existing appointment</a></li>
+				<li><a href="#">Start rapid pass</a></li>
+				<li><a href="#">Get digital donor card</a></li>
+			</ul>
+		</div>
+		<div class="col-md-4">
+		   <p style="color:green"><b>How To Donate</b></p>
+		   <ul class="chk">
+				<li><a href="#">Find a blood drive</a></li>
+				<li><a href="#">Eligibility requirements</a></li>
+			    <li><a href="#">Types of blood donations</a></li>
+				<li><a href="#">Learn about blood</a></li>
+			</ul>
+		</div>
+		<div class="col-md-4">
+		<p style="color:green;"><b>Blood Donation Process</p></b>
+		<ul class="chk">
+			<li><a href="#">Donation process overview</a></li>
+			<li><a href="#">What to to before,during and after blood donation</a></li>
+			<li><a href="#">What happens to donated blood</a></li>
+		</ul>
+		</div>
+		</div>
+		</div>
+		</li>
+	  <li class="nav-item b ml-5 dropdown">
+        <a class="nav-link font-weight-bold dropdown-toggle" href="#" data-toggle="dropdown">Host Blood Drive</a>
+		<span class="caret"></span>
+		<div class="dropdown-menu p-4" id="firstu" style="width:250%;">
+		   <div class="row">
+		     <div class="col-md-4">
+			 <p style="color:green;"><b>Manage My Blood Drive</b></p>
+			 	     <ul class="chk">
+					  <li><a href="#">Blood program leader login</a></li>
+					  <li><a href="#">Blood program leader toolkit</a></li>
+					  <li><a href="#">Premium blood partners</a></li>
+					</ul>
+			 </div>
+		     <div class="col-md-4">
+			 <p style="color:green;"><b>Learn about Hosting</b></p>
+			 <ul class="chk">
+					  <li><a href="#">Why host a blood drive?</a></li>
+					  <li><a href="#">How hosting a blood drive works?</a></li>
+			</ul>
+			 </div>
+		     <div class="col-md-4">
+			 <p style="color:green;"><b>Host a Blood Drive</b></p>
+			 <ul class="chk">
+					  <li><a href="#">Apply to Host a blood drive</a></li>
+					  <li><a href="#">Start a virtual blood drive</a></li>
+			</ul>
+			 </div>
+           </div>
+		</div>
+		</li>
+      <li class="nav-item b ml-5 dropdown">
+        <a class="nav-link font-weight-bold dropdown-toggle" href="#" data-toggle="dropdown">Biomedical Service</a>
+		<span class="caret"></span>
+
+        <ul class="dropdown-menu" id="firsti" style="width:150%;">
+        <li>
+		  <button class="ash  btn font-weight-bold" type="button">Hospital Partners</button>
+		</li>
+		<li class="divider"></li>
+        <li>
+		   <button class=" ash btn font-weight-bold" type="button">Patient Services</button>
+		</li>
+        <li>
+		    <button class=" ash btn font-weight-bold" type="button">Eduction and Research</button>
+		</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--***************************************************BODY***********************************************************-->
+<marquee style="background:red; color:white;"><h3>**Avail 10% bumper discount for first time users**</h4></marquee><br>
+<div class="container-fluid " id="saacha">
+<div class="row">
+<!--*********************************************COROUSEL************************************************************-->
+<div class="col-md-6 ">
+<div class="container">
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://timesofindia.indiatimes.com/thumb/msid-69785128,width-1200,height-900,resizemode-4/.jpg" width="100%" height="450px">
+    </div>
+    <div class="carousel-item">
+      <img  src="https://www.tngovbloodbank.in/homepages/images/BANNER1.jpg" width="100%" height="450px">
+    </div>
+	<div class="carousel-item">
+      <img src="https://cdn.24.co.za/files/Cms/General/d/5461/fa89a9fd419143c2a8e16602f94866bc.jpg"  width="100%" height="750px">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true" ></span>
+  </a>
+</div>
+</div>
+</div>
+<!--*********************************************SIGN UP***********************************************************************-->
+<div class="col-md-6 container" id="sacha">
+    <h1 style="color:green; font-family:'Bitter', serif;"><b>SIGN UP<b></h1>
+   <form action="index.html" onsubmit="return validation()">
+         <div class="form-group">
+	     <label>Username:</label>
+         <input type="text" name="username" class="form-control" id="user" style="width:70%;" autocomplete="off">
+		 <span id="spau" class="text-danger font-weight-bold"></span>
+		 </div>
+		 <div class="form-group">
+		 <label>Email:</label>
+		 <input type="text" name="email" class="form-control" id="mail" style="width:70%;" autocomplete="off">
+		 <span id="spae" class="text-danger font-weight-bold"></span>
+		 </div>
+		 <div class="form-group">
+		 <label>Password:</label>
+		 <input type="password" name="password" class="form-control" id="pass" style="width:70%;" autocomplete="off">
+		 <span id="spap" class="text-danger font-weight-bold"></span>
+		 </div>
+		 <div class="form-group">
+		 <label>Confirm Password:</label>
+		 <input type="password" name="password" class="form-control" id="cpass" style="width:70%;" autocomplete="off">
+		 <span id="spac" class="text-danger font-weight-bold"></span>
+		 </div>
+		 <div class="form-group">
+		 <label>Age:</label>
+		 <input type="text" name="age" class="form-control" id="age" style="width:70%;" autocomplete="off">
+		 <span id="spaa" class="text-danger font-weight-bold"></span>
+		 </div>
+		 <div class="form-group">
+		 <label>Blood Group:</label>
+		 <select name="bgroup" class="form-control" id="bgroup" style="width:70%;" autocomplete="off">
+		<option>A+ve</option>
+        <option>A-ve</option>
+        <option>B+be</option>
+        <option>B-ve</option>
+		<option>O+ve</option>
+        <option>O-ve</option>
+        <option>AB+ve</option>
+        <option>AB-ve</option>
+		 </select>
+		 <span id="spab" class="text-danger font-weight-bold"></span>
+		 </div>
+		 <div class="form-group">
+		 <label>Mobile No:</label>
+		 <input type="text" class="form-control" name="mobn" id="mobn" style="width:70%;" autocomplete="off">
+		 <span id="spam" class="text-danger font-weight-bold"></span>
+	     </div>
+		 <div class="form-group">
+		 <button class="btn btn-success form-control" style="width:30%;" type="submit">SUBMIT</button>
+		 </div>
+	 </form>
+</div>
+</div>
+</div>
+</body>
+<html>

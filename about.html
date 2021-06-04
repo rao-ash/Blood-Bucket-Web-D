@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+ <html>
+
+<head>
+  <title>about</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Merienda+One&display=swap"
+    rel="<stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" integrity="sha256-a2tobsqlbgLsWs7ZVUGgP5IvWZsx8bTNQpzsqCSm5mk=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="about.css">
+</head>
+
+<body onload="load()">
+<div id="loading"></div>
+<div id="progress"></div>
+<div id="scroll"></div>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+          <div class="ror">
+
+            <a class="navbar-brand font-weight-bold font-italic text-white" href="#">BLOOD BUCKET</a>
+            <div id="circle" style="width: 5px;height:5px; border-radius: 50%;"></div>
+          </div>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active ">
+                <a class="nav-link font-weight-bold" id="about" href="index.html">Home</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link font-weight-bold" id="contacts" href="about.html">About</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link font-weight-bold" id="signin" href="#mymodal" data-toggle="modal">Sign In</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link font-weight-bold " id="signup" href="signup.html">Sign Up</a>
+              </li>
+            </ul>
+          </div>
+
+        </nav>
+      </div>
+    <div class="modal fade" id="mymodal">
+   <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+	    <div class="modal-header">
+		   <h3 class="text-primary">LOG IN</h3>
+		   <button type="button" class="close" data-dismiss="modal">&times;</button>
+		</div>
+		<div class="modal-body">
+		    <form action ="" onsubmit="return validation()">
+			    <div class="form-group">
+	            	<label><i class="fa fa-user"></i>Username:</label>
+                    <input type="text" name="username" class="form-control" id="user" style="width:70%;" autocomplete="off">
+		            <span id="spau" class="text-danger font-weight-bold"></span>
+				</div>
+				<div class="form-group">
+		            <label><i class="fa fa-key"></i>Password:</label>
+		            <input type="password" name="password" class="form-control" id="pass" style="width:70%;" autocomplete="off">
+		            <span id="spap" class="text-danger font-weight-bold"></span>
+		        </div>
+		</div>
+		<div class="modal-footer justify-content-center">
+		    <button class="btn btn-success form-control" type="submit" >LOG IN</button>
+		</div>
+		</form>
+	  </div>
+   </div>
+</div>
+      <!-------*************************************navbar ends here*********************************-->
+     <div class="bg_round">
+	 <div class="row container-fluid text-center">
+	 <div class="col-md-4" >
+	 <img src="profile.jpg" width="150px" style="margin-top:100px;border-radius:50%;">
+	 <div style="border-right:2px solid white;">
+	 <h1 class="wow animated bounce infinite">ASHWANI</h1>
+	 <h3 class="wow animated fadeInLeft">11913098</h3>
+	 <h3 class="wow animated fadeInLeft">IT-06</h3>
+	 </div>
+	 </div>
+	 <div class="col-md-8" style="letter-spacing:0.1em;">
+	 <h2 style="margin-top:320px;margin-bottom:30px;" class="wow animated swing infinite">About Me</h2>
+	 <p class="wow animated rotateInUpRight"><b>My name is Ashwani Rao and i belong to Rewari,Haryana.I completed my school life from Delhi Public School,Rewari. Currently at
+	    NIT Kurukshetra i am pursuing btech in information technology. I am interested in Programming and Web Development .
+		My interest however extends beyond the web and i am interesed in playing football.</b></p>
+	 </div>
+	 </div>
+    </div>
+ <div class="container shadow text-center" id="review">
+   <div class="container pt-4">
+   <div class="row">
+      <div class="col-md-4 jbru" >
+	   <h6 style="color:green;"><b>Some Promises from BLOOD BUCKET</b></h6><div class="under"></div><br><br>
+	     <div class="row" style="border-right:2px solid black;" >
+		   <div class="col-sm-2 col-3 mr-0 pr-0">
+	         <img src="https://previews.123rf.com/images/deimosz/deimosz1502/deimosz150201250/37569290-green-100-high-quality-sign-icon-label-or-sticker-isolated-on-white-background.jpg" class="rounded-circle" width="100%">
+		   </div>
+		   <div class="col-sm-10 col-9 ml-0 pl-0" style="font-size:14px" >
+		     <div><b>100% ORIGINAL  Guarantee</b> for all products</div><br><br>
+		   </div>
+	    </div>
+		<div class="row" style="border-right:2px solid black;">
+		   <div class="col-sm-2 col-3 mr-0 pr-0">
+	         <img src="https://previews.123rf.com/images/luplupme/luplupme1702/luplupme170201224/72701685-birthday-badge-tenth-banner-design-flat-celebration-emblem-anniversary-card-date-and-paper-sticker-i.jpg" class="rounded-circle" width="100%">
+		   </div>
+		   <div class="col-sm-10 col-9 ml-0 pl-0" style="font-size:14px" >
+		     <div><b>Return Within 10 Days</b> of receiving your order</div><br><br>
+		   </div>
+	    </div>
+		<div class="row" style="border-right:2px solid black;">
+		   <div class="col-sm-2 col-3 mr-0 pr-0">
+	         <img src="https://cdn2.vectorstock.com/i/1000x1000/40/81/cartoon-delivery-truck-vector-19404081.jpg" class="rounded-circle" width="100%">
+		   </div>
+		   <div class="col-sm-10 col-9 ml-0 pl-0" style="font-size:14px" >
+		     <div><b>Free Deleivery</b> on orders above 2100/-</div>
+		   </div>
+	    </div>
+	</div>
+	<div class="col-md-8 jbru1">
+		<h6 style="color:green;"><b>Stay Connected to BLOOD BUCKET</b></h6><div class="under1"></div><br>
+		<div class="row">
+		   <div class="col-sm-8">
+		   <p><b>Join BLOOD BUCKET through Social Media</b></p>
+		   <a href="https://www.facebook.com/" class="fa fa-facebook re"></a>
+           <a href="#" class="fa fa-twitter re"></a>
+		   <a href="#" class="fa fa-youtube re"></a>
+           <a href="#" class="fa fa-instagram re"></a>
+           <a href="#" class="fa fa-pinterest re"></a>
+		   <br><br>
+		   <p><b>BLOOD BUCKET Ratings</b></p>
+		   <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star"></span>
+		   </div>
+		   <div class="col-sm-4">
+		   <p><b>Registered Office</b></p><br>
+		   <p>Office.no 4  Elegant Heights BMG Elegant City Rewari Haryana INDIA 8708058733,9729038972</p>
+		   </div>
+		</div>
+	</div>
+   </div>
+</div>
+<p style="background-color:#f0f5f5;color:black;margin-bottom:0px;">@copyrights reserved ashwani</p>
+</div>
+<!--******************************************FOOTER*******************************************************-->
+<script>
+
+        let pro = document.getElementById('progress');
+        let th = document.body.scrollHeight - window.innerHeight;
+
+        window.onscroll = function () {
+            let prh = (window.pageYOffset / th) * 100;
+
+            pro.style.height = prh + "%";
+
+        }
+	var loading=document.getElementById("loading");
+function load(){
+    loading.style.display='none';
+}
+
+    </script>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.js"
+integrity="sha256-nnFnuz7rC1JLnvsb8M7A9aXcRHTpUN4vYA26t2UO+dQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"
+      integrity="sha256-399DNRyfIpWIy1ZV0KmEIIuIQ5sBHdLu9MBtVHrNtt8=" crossorigin="anonymous"></script>
+     <script>
+        new WOW().init();
+        </script>
+        <script src="about.js"></script>
+
+</html>

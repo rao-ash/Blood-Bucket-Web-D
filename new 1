@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ASSIGNMENT</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            .jk{
+                margin-top:10px;
+                text-align: center;
+                width:400px;
+                margin-left: 500px;
+                border:2px solid black;
+
+            }
+        </style>  
+        <script src="js.js"></script>
+        <script>
+/***********VALIDATION BEGINS ***********************/
+            function validate()
+            {
+                var email=document.getElementById("emai").value;
+                var emai=document.getElementById("emai");
+                var pass=document.getElementById("pass");
+                var phone=document.getElementById("phone");
+                var phon=document.getElementById("phone").value;
+                
+                var regx1=/^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9\-]+).([a-z]+)(.[a-z]+)?$/;
+                var regx2=/^[7-9]\d{9}$/;
+
+               if(email=="")
+                {
+                    alert("No blank values allowed");
+                    emai.style.border="solid 3px red";
+                    return false;
+                }
+                if(regx1.test(email))
+                {}
+                else
+                {
+                    alert("Enter valid email address");
+                    emai.style.border="solid 3px red";
+                    return false;
+                }
+
+             if(pass.value=="")
+                {
+                    alert("No blank values allowed");
+                    pass.style.border="solid 3px red";
+                    return false;
+                }
+
+                else if(pass.value.length<8)
+                {
+                    alert("Password too short");
+                    pass.style.border="solid 3px red";
+                    return false;
+                }
+
+                else if(phone.value=="")
+                {
+                    alert("No blank values allowed");
+                    phone.style.border="solid 3px red";
+                    return false;
+                }
+
+           
+
+                if(regx2.test(phon))
+                {}
+                else
+                {
+                    alert("Enter valid mobile number");
+                    phone.style.border="solid 3px red";
+                    return false;
+                }
+          
+            }
+         
+/* **************VALIDATION ENDS******************** */
+            function printmsg()
+            {
+                alert("5 seconds have passed");
+            }
+            $(document).ready(function()
+            {
+
+                alert("Web page has been loaded");
+                window.setTimeout(printmsg,5000);//FOR PRINTING MSG AFTER 5 SECONDS
+                window.setTimeout(change,5000);//FOR CHANGING BACKGROUND COLOR AFTER 5 SECONDS
+                $("#bold").click(function()
+            {
+                $("#change").css("font-weight","bold");          //BUTTON FOR BOLD TEXT
+            });
+            $("#ital").click(function()
+            {
+                $("#change").css("font-style","italic");       //BUTTON FOR ITALIC TEXT
+            });
+            $("#under").click(function()
+            {
+                $("#change").css("text-decoration","underline");        //BUTTON FOR UNDERLINE TEXT
+            });
+            $("#show").click(function()
+            {
+                $("#hidden").css("visibility","visible");               //FOR SHOW FUNCTION  
+                $("#hidden").css("font-style","italic");
+            });
+            $("#againhide").click(function()
+            {
+                $("#hidden").css("visibility","hidden");          //FOR HIDING FUNCTION
+            });
+
+/***************CALCULATOR BEGINS********************/  
+
+            $("#add").click(function()//add function
+            {
+                var a=Number(document.getElementById("first").value);
+                var b=Number(document.getElementById("second").value);
+                var c=a+b;
+                document.getElementById("result").value=c;
+            });
+            $("#sub").click(function()  //subtract function
+            {
+                var a=Number(document.getElementById("first").value);
+                var b=Number(document.getElementById("second").value);
+                var c=a-b;
+                document.getElementById("result").value=c;
+            });
+            $("#mul").click(function()  //multiply function
+            {
+                var a=Number(document.getElementById("first").value);
+                var b=Number(document.getElementById("second").value);
+                var c=a*b;
+                document.getElementById("result").value=c;
+            });
+            $("#div").click(function()  //divide function
+            {
+                var a=Number(document.getElementById("first").value);
+                var b=Number(document.getElementById("second").value);
+                var c=a/b;
+                document.getElementById("result").value=c;
+            });
+            $("#reset").click(function()  //reset function
+            {
+                document.getElementById("first").value=0;
+                document.getElementById("second").value=0;
+            
+                document.getElementById("result").value=0;
+                
+            });
+/************CALCULATOR ENDS**********************/
+            });
+
+
+            function change()
+            {
+               document.body.style.backgroundColor='#1868ae';
+               $("#hidden").css("background-color","#c6d7eb");
+            }
+
+     
+         
+    
+            
+
+            
+         
+        
+        </script>      
+    </head>
+    <body>
+        <div id="trans" style="text-align:center; padding-top:10px;">
+            <p id="change">HI,CLICK BUTTONS BENEATH TO SEE MAGIC </p>
+            <button id="bold">BOLD</button>
+            <button id="ital">ITALIC</button>
+            <button id="under">UNDERLINE</button>
+            <br>
+            <button id="show" style="text-align: center;">SHOW</button>
+            <button id="againhide" style="text-align: center;">HIDE</button>
+
+        </div>
+        
+        <div id="hidden" style="text-align:center;visibility:hidden; border:2px solid black">
+            <pre>ROHIT SHARMA IS AN EXCELLENT PLAYER IN THE WORLD OF CRICKET.
+ Whether or not you consider him as the greatest of great, 
+for me he is the best
+            </pre>
+        </div>
+    </body>
+        <div class="jk">
+            <p>FORM VALIDATIONS</p>
+            <form onsubmit="return validate()">
+
+                <label for="emai">EMAIL</label>
+                    <input type="text" name="email" id="emai" placeholder="Email" >
+                    <br>
+                    <br>
+                <label for="pass">PASSWORD</label>
+                    <input type="password" name="password" id="pass" placeholder="password 8 digits or more" >  
+                    <br>
+                    <br>
+                <label for="phone">MOBILE</label>
+                    <input type="text" name="phone" id="phone" placeholder="Indian Mobile number 10digits" >
+                    <br>
+                    <br>
+                    <button type="submit" >SUBMIT</button>  
+            </form>
+        </div>
+        <div class="jk">
+            <p>CALCULATOR</p>
+            <label for="first">FIRST</label>
+            <input type="text" id="first" placeholder="first number">
+            <br>
+            <br>
+            <label for="second">SECOND</label>
+            <input type="text" id="second" placeholder="second number">
+            <br>
+            <br>
+            <button id="add">ADD</button>
+            <button id="sub">SUB</button>
+            <button id="mul">MUL</button>
+            <button id="div">DIV</button>
+            <input type="reset" id="reset">
+            <br>
+            <br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+            <label for="result">RESULT</label>
+            <input type="text" id="result" placeholder="result" value="0">
+        </div>
+
+    </body>
+</html>
